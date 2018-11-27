@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrudOperations.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +10,16 @@ namespace CrudOperations.Controllers
 {
     public class ValuesController : ApiController
     {
+        static List<string> strings = new List<string>()
+        {
+            "value0","value1","value2"
+
+        };
+
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return strings;
         }
 
         // GET api/values/5
