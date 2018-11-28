@@ -16,7 +16,7 @@ namespace CrudOperations.Controllers
             new Employee(){Id=2,Name="Varma",Gender="Male",Department="Cse",City="Hyd"},
             new Employee(){Id=3,Name="Swathi",Gender="Female",Department="Ece",City="Tpt"}
         };
-        public IEnumerable<Employee> Get()
+        public IEnumerable<Employee> GetAllEmployees()
         {
             return Employees.ToList();
         }
@@ -38,6 +38,7 @@ namespace CrudOperations.Controllers
             var response= Request.CreateResponse(HttpStatusCode.OK);
             return response;
         }
+        [HttpPut]
         public HttpResponseMessage Put(int id,Employee employee)
         {
             var item = Employees.SingleOrDefault(x => x.Id == id);
