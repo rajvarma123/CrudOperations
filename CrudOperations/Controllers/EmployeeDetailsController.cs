@@ -90,7 +90,6 @@ namespace CrudOperations.Controllers
                     var readTask = result.Content.ReadAsAsync<Employee>();
                     readTask.Wait();
                      employee = readTask.Result;
-                    return RedirectToAction("Index");
                 }
             }
 

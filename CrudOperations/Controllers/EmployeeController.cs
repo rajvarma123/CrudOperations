@@ -16,6 +16,8 @@ namespace CrudOperations.Controllers
             new Employee(){Id=2,Name="Varma",Gender="Male",Department="Cse",City="Hyd"},
             new Employee(){Id=3,Name="Swathi",Gender="Female",Department="Ece",City="Tpt"}
         };
+
+        [HttpGet]
         public IEnumerable<Employee> GetAllEmployees()
         {
             return Employees.ToList();

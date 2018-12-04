@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.js"></script>>
+    <script src="~/Scripts/Employee.js"></script>
+</head>
+<body> 
+    <div ng-app="EmployeeModule"  ng-controller="Employee">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>City</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="employee in Employees">
+                    <td>{{employee.Id}}</td>
+                    <td>{{employee.Name}}</td>
+                    <td>{{employee.Gender}}</td>
+                    <td>{{employee.Department}}</td>
+                    <td>{{employee.City}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
